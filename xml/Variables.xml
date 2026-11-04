@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="TopBarCPUInfoVar">
+		<value condition="Skin.HasSetting(show_cpu) + Skin.HasSetting(show_weatherinfo)">[COLOR grey]CPU : $INFO[System.CPUTemperature]  l  RAM : $INFO[system.memory(used.percent)]  l[/COLOR]</value>
+		<value condition="Skin.HasSetting(show_cpu)">[COLOR grey]CPU : $INFO[System.CPUTemperature]  l  RAM : $INFO[system.memory(used.percent)][/COLOR]</value>
+		<value></value>
+	</variable>
 	<variable name="PVRStatusImageVar">
 		<value condition="ListItem.IsRecording">windows/pvr/record.png</value>
 		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">windows/pvr/timer.png</value>
